@@ -1,0 +1,80 @@
+body{
+    background: radial-gradient(circle at center, #4158D0, #C850C0, #FFCC70);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.571);
+    text-align: center;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font: normal 10pt Arial;
+}
+
+.icones{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.icones li{
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.3em;
+}
+
+.icones i{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 17.5px;
+    left: 17.5px;
+    transition: all 265ms ease-out;
+}
+
+.icones a{
+    display: inline-block;
+}
+
+.icones a::before{
+    transform: scale(1);
+    -ms-transform: scale(1); /*ver depois */
+    -webkit-transform: scale(1);
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    transition: all 265ms ease-out;
+}
+
+.icones a:hover::before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.icones a:hover i{
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    color: #FFF;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
